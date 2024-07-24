@@ -9,6 +9,8 @@ public class CreateBlock : MonoBehaviour
     public int columns = 10;
     public float blockWidth = 2.2f;
     public float blockHeight = 1.0f;
+    public GameObject parentPrefab;
+    private float firstBlockPositionY = 1.35f;
 
     void Start()
     {
@@ -29,11 +31,11 @@ public class CreateBlock : MonoBehaviour
             {
                 Vector3 blockPosition = new Vector3(
                     startPosition.x + col * blockWidth,
-                    startPosition.y - row * blockHeight,
+                    startPosition.y - row * blockHeight + firstBlockPositionY,
                     0
                 );
 
-                Instantiate(blockPrefab, blockPosition, Quaternion.identity);
+                Instantiate(blockPrefab, blockPosition, Quaternion.identity, parentPrefab.transform);
             }
         }
     }
