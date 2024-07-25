@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BallManager : MonoBehaviour
+public class Ball : MonoBehaviour
 {
     private Rigidbody rb;
     public static Vector3 ballPos;
@@ -24,14 +24,4 @@ public class BallManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // void OnCollisionEnter(Collision collision)
-    // {
-    //     if(collision.gameObject.CompareTag("Block"))
-    //     {
-    //         // 反射角度を計算
-    //         Vector3 reflection = Vector3.Reflect(rb.velocity, collision.contacts[0].normal);
-    //         rb.velocity = reflection.normalized * speed;
-    //     }
-    // }
 }
