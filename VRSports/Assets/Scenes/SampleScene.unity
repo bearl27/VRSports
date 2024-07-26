@@ -289,8 +289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 7932995294084023230, guid: 9320626806acb46dca433fac3d5445a7, type: 3}
-  rows: 5
-  columns: 10
+  rows: 8
+  columns: 15
   blockWidth: 1.01
   blockHeight: 0.51
   parentPrefab: {fileID: 978211452}
