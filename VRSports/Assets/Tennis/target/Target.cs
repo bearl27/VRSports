@@ -4,15 +4,18 @@ public class Target : MonoBehaviour
 {
     void Start()
     {
-        TargetManager.setExistTarget(true);
+        TargetManager.ExistTarget = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            TargetManager.setExistTarget(false);
-            Destroy(gameObject);
+            TargetManager.ExistTarget = false;
+            //3秒後に消す
+            Destroy(gameObject, 2.0f);
         }
     }
+
+
 }
