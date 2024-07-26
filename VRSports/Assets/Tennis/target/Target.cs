@@ -12,8 +12,10 @@ public class Target : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball"))
         {
             TargetManager.ExistTarget = false;
+            //スコアを加算
+            Score.AddScore();
             //3秒後に消す
-            Destroy(gameObject, 2.0f);
+            Destroy(gameObject, 1.0f);
         }
     }
 

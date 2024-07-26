@@ -15,6 +15,7 @@ public class TargetManager : MonoBehaviour
     private float targetMaxY = 2.0f;
     private float targetMinY = 0.5f;
     [SerializeField] private float respawnDelay = 1.0f;
+    [SerializeField] private Color endColor = Color.blue;
 
     void Start()
     {
@@ -45,6 +46,29 @@ public class TargetManager : MonoBehaviour
             -1.0f
         );
 
-        Instantiate(targetPrefab, targetPosition, Quaternion.identity);
+        GameObject spawnedTarget = Instantiate(targetPrefab, targetPosition, Quaternion.identity);
+        ExistTarget = true;
+        StartCoroutine(SpawnEffect(spawnedTarget));
+    }
+
+    private IEnumerator SpawnEffect(GameObject target)
+    {
+        Renderer renderer = target.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            float duration = 0.5f;
+            float elapsedTime = 0f;
+            Color startColor = Color.white;
+
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+                float t = elapsedTime / duration;
+                renderer.material.color = Color.Lerp(startColor, endColor, t);
+                yield return null;
+            }
+
+            renderer.material.color = endColor;
+        }
     }
 }
