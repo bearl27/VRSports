@@ -25,17 +25,18 @@ public class Block : MonoBehaviour
         if (hitCount == 1)
         {
             GetComponent<Renderer>().material = materials[0];
-            Debug.Log("Hit1");
+           // Debug.Log("Hit1");
         }
         else if (hitCount == 2)
         {
             GetComponent<Renderer>().material = materials[1];
-            Debug.Log("Hit2");
+           // Debug.Log("Hit2");
         }
         else if (hitCount == 3)
         {
             rb.isKinematic = false;
-            Debug.Log("Hit3");
+            rb.AddForce(Vector3.forward * 10, ForceMode.Impulse);
+            //Debug.Log("Hit3");
         }
     }
 

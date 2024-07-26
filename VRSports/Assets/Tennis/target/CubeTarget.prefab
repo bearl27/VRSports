@@ -219,8 +219,8 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 2
-  partsX: 8
-  partsY: 8
+  partsX: 4
+  partsY: 4
   preCalculate: 1
   addTorques: 1
   hideSplintersInHierarchy: 1

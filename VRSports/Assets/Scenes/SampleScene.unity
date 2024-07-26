@@ -291,8 +291,8 @@ MonoBehaviour:
   blockPrefab: {fileID: 7932995294084023230, guid: 9320626806acb46dca433fac3d5445a7, type: 3}
   rows: 5
   columns: 10
-  blockWidth: 1.05
-  blockHeight: 0.55
+  blockWidth: 1.01
+  blockHeight: 0.51
   parentPrefab: {fileID: 978211452}
 --- !u!114 &408061851
 MonoBehaviour:
@@ -306,7 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7016bd00ca8462fa8932ad5933a203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPrefab: {fileID: 4135385036876429573, guid: 5e57ba04bae4f4453a783e27f67e12b9, type: 3}
+  targetPrefab: {fileID: 3716183220322260520, guid: d0716be6411ab45c08f3819a37d4d633, type: 3}
+  respawnDelay: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
