@@ -122,6 +122,8 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: e07ea30a5c0d94995b3ff62b46c64900, type: 2}
   - {fileID: 2100000, guid: a0bb3bdee036f42a99e4211d327fa362, type: 2}
+  hitSound: {fileID: 8300000, guid: c30239cdde0574349885cfca02a0562f, type: 3}
+  destroySound: {fileID: 8300000, guid: c161aa59000c0465bac9c264ce70a779, type: 3}
 --- !u!54 &5105740128804150955
 Rigidbody:
   m_ObjectHideFlags: 0
