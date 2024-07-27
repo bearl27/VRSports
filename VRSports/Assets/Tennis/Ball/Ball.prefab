@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7932995294084023230
+--- !u!1 &2078817121324089771
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4520926862997425555}
-  - component: {fileID: 4573114075062790118}
-  - component: {fileID: 5468362224580205954}
-  - component: {fileID: 8287330509943931233}
-  - component: {fileID: 7472469628179007100}
-  - component: {fileID: 5105740128804150955}
+  - component: {fileID: 2153606887494026121}
+  - component: {fileID: 2120627858902542674}
+  - component: {fileID: 5942920566994454985}
+  - component: {fileID: 4526240863672990436}
+  - component: {fileID: 433252232899225236}
+  - component: {fileID: -4377605567615681809}
+  - component: {fileID: 439837073595322581}
+  - component: {fileID: -7995653264205646171}
   m_Layer: 0
-  m_Name: block
-  m_TagString: Block
+  m_Name: Ball
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4520926862997425555
+--- !u!4 &2153606887494026121
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932995294084023230}
+  m_GameObject: {fileID: 2078817121324089771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4573114075062790118
+--- !u!33 &2120627858902542674
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932995294084023230}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5468362224580205954
+  m_GameObject: {fileID: 2078817121324089771}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5942920566994454985
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932995294084023230}
+  m_GameObject: {fileID: 2078817121324089771}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4e8389d1a906a496a85dea404a109467, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,14 +88,14 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8287330509943931233
-BoxCollider:
+--- !u!135 &4526240863672990436
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932995294084023230}
-  m_Material: {fileID: 13400000, guid: 5d56eb2f55d194468ade9a7c09bc1415, type: 2}
+  m_GameObject: {fileID: 2078817121324089771}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -105,32 +107,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7472469628179007100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932995294084023230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9274319857cb747b088a725898ad71f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: e07ea30a5c0d94995b3ff62b46c64900, type: 2}
-  - {fileID: 2100000, guid: a0bb3bdee036f42a99e4211d327fa362, type: 2}
-  hitSound: {fileID: 8300000, guid: c30239cdde0574349885cfca02a0562f, type: 3}
-  destroySound: {fileID: 8300000, guid: c161aa59000c0465bac9c264ce70a779, type: 3}
---- !u!54 &5105740128804150955
+--- !u!54 &433252232899225236
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932995294084023230}
+  m_GameObject: {fileID: 2078817121324089771}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -147,7 +132,51 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4377605567615681809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078817121324089771}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b4bc897d8074b7699d8be471fd0282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetName: Target
+  force: 5
+  maxSpeed: 5
+--- !u!114 &439837073595322581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078817121324089771}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e3c7cb5a6c64359b715ea764faf101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetName: Target
+  speed: 5
+--- !u!114 &-7995653264205646171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078817121324089771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb31dacfa1a09422ebcdba467636c662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetName: Target
+  speed: 5
+  rangeX: 3
